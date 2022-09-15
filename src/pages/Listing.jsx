@@ -13,6 +13,7 @@ import { getAuth } from 'firebase/auth'
 import { db } from '../firebase.config'
 import Spinner from '../components/Spinner'
 import shareIcon from '../assets/svg/shareIcon.svg'
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 
 
 function Listing() {
@@ -47,7 +48,6 @@ function Listing() {
   return (
     <main>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
         slidesPerView={1}
         pagination={{ clickable: true }}
         style={{height: "50vw"}}
