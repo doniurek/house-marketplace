@@ -33,7 +33,6 @@ function Slider() {
         })
       })
 
-      console.log(listings)
       setListings(listings)
       setLoading(false)
     }
@@ -44,6 +43,10 @@ function Slider() {
 
   if (loading) {
     return <Spinner />
+  }
+
+  if (listings.length === 0) {
+    return <></>
   }
 
   return (
